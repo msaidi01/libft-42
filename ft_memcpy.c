@@ -6,30 +6,27 @@
 /*   By: msaidi <msaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:28:41 by msaidi            #+#    #+#             */
-/*   Updated: 2022/10/24 11:11:49 by msaidi           ###   ########.fr       */
+/*   Updated: 2022/10/30 15:37:42 by msaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char	*s;
-	char	*d;
+	unsigned char	*s;
+	unsigned char	*d;
 	size_t	i;
 
-	s = (char *) src;
-	d = (char *) dst;
+	s = (unsigned char *) src;
+	d = (unsigned char *) dst;
 	i = 0;
-	if (n == 0)
-		return (s);
+	if (n == 0 || dst == src)
+		return (dst);
 	while (i < n)
 	{
 		d[i] = s[i];
 		i++;
 	}
-	d[i] = '\0';
-	return (d);
+	return (dst);
 }

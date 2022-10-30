@@ -6,7 +6,7 @@
 /*   By: msaidi <msaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 18:03:40 by msaidi            #+#    #+#             */
-/*   Updated: 2022/10/16 11:50:48 by msaidi           ###   ########.fr       */
+/*   Updated: 2022/10/30 14:49:19 by msaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
-	if (!s)
-		return(0);
 	while (s[i])
 		i++;
 	return (i);

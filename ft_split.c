@@ -6,7 +6,7 @@
 /*   By: msaidi <msaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 13:26:11 by msaidi            #+#    #+#             */
-/*   Updated: 2022/10/18 16:29:54 by msaidi           ###   ########.fr       */
+/*   Updated: 2022/10/29 20:40:20 by msaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,16 @@ static	char	**makestrs(char const *s, char c)
 	return (strs);
 }
 
+static	int	lenstr(char const *s, char c)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != c && s[i] != '\0')
+		i++;
+	return (i);
+}
+
 static	char	**fillstrs(char const *s, char c)
 {
 	char	**strs;
@@ -61,15 +71,6 @@ static	char	**fillstrs(char const *s, char c)
 	return (strs);
 }
 
-static	int	lenstr(char const *s, char c)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] != c && s[i] != '\0')
-		i++;
-	return (i);
-}
 
 char	**ft_split(char const *s, char c)
 {

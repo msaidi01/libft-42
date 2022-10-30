@@ -6,7 +6,7 @@
 /*   By: msaidi <msaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:56:24 by msaidi            #+#    #+#             */
-/*   Updated: 2022/10/24 11:03:14 by msaidi           ###   ########.fr       */
+/*   Updated: 2022/10/30 13:48:30 by msaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,4 @@ void	ft_putnbr_fd(int n, int fd)
 	if (i > 9)
 		ft_putnbr_fd(i / 10, fd);
 	ft_putchar_fd(i % 10 + '0', fd);
-}
-int main()
-{
-	ft_putnbr_fd(123453436, 1);
 }

@@ -6,7 +6,7 @@
 /*   By: msaidi <msaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:09:23 by msaidi            #+#    #+#             */
-/*   Updated: 2022/10/19 12:18:37 by msaidi           ###   ########.fr       */
+/*   Updated: 2022/10/30 13:47:23 by msaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,4 @@ char	*ft_itoa(int n)
 		str = convert(str, n, l);
 	}
 	return (str);
-}
-int main()
-{
-	printf("%s", ft_itoa(-975648));
 }

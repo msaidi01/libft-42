@@ -6,7 +6,7 @@
 /*   By: msaidi <msaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 17:51:40 by msaidi            #+#    #+#             */
-/*   Updated: 2022/10/14 11:45:26 by msaidi           ###   ########.fr       */
+/*   Updated: 2022/10/29 20:39:21 by msaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_calloc(size_t count, size_t size)
 
 	x = malloc(count * size);
 	if (!x)
-		return (NULL);
+		return ;
 	ft_bzero(x, count);
-	return (x);
+	return ;
 }

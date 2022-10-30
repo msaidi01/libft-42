@@ -6,7 +6,7 @@
 /*   By: msaidi <msaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 16:33:31 by msaidi            #+#    #+#             */
-/*   Updated: 2022/10/17 15:11:43 by msaidi           ###   ########.fr       */
+/*   Updated: 2022/10/30 13:48:57 by msaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,4 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (-1);
 	else
 		return (0);
-}
-int main()
-{
-	printf("%d\n", ft_strncmp("amine", "aminw", 5));
-	printf("%d", strncmp("amine", "aminw", 5));
 }

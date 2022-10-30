@@ -6,7 +6,7 @@
 /*   By: msaidi <msaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 14:05:03 by msaidi            #+#    #+#             */
-/*   Updated: 2022/10/19 14:03:21 by msaidi           ###   ########.fr       */
+/*   Updated: 2022/10/30 13:50:23 by msaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,10 @@ void	*ft_memset(void *b, int c, size_t len)
 
 	i = 0;
 	p = (unsigned char *) b;
-	while (p[i] && i < len)
+	while (i < len)
 	{
 		p[i] = c;
 		i++;
 	}
 	return (p);
-}
-int main()
-{
-	char c[6] ="sameed" ;
-	printf("%s", ft_memset(c,'4',9));
-	
 }
