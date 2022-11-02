@@ -6,7 +6,7 @@
 /*   By: msaidi <msaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 13:26:11 by msaidi            #+#    #+#             */
-/*   Updated: 2022/11/01 17:32:21 by msaidi           ###   ########.fr       */
+/*   Updated: 2022/11/03 00:09:16 by msaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static	char	**makestrs(char const *s, char c)
 	return (strs);
 }
 
-char	**free_all(char **strs, int j)
+static char	**free_all(char **strs, int j)
 {
 	while (j >= 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: msaidi <msaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 09:43:24 by msaidi            #+#    #+#             */
-/*   Updated: 2022/10/14 11:45:13 by msaidi           ###   ########.fr       */
+/*   Updated: 2022/11/03 00:36:06 by msaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strdup(const char *s1)
 	size_t	i;
 
 	i = ft_strlen(s1);
-	if (!s1)
-		return (NULL);
 	dp = (char *)malloc (sizeof(char) * (i + 1));
 	if (!dp)
 		return (NULL);

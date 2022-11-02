@@ -6,13 +6,11 @@
 /*   By: msaidi <msaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 13:09:49 by msaidi            #+#    #+#             */
-/*   Updated: 2022/10/30 15:47:34 by msaidi           ###   ########.fr       */
+/*   Updated: 2022/11/03 00:07:22 by msaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
