@@ -6,7 +6,7 @@
 /*   By: msaidi <msaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 11:46:17 by msaidi            #+#    #+#             */
-/*   Updated: 2022/10/16 09:20:15 by msaidi           ###   ########.fr       */
+/*   Updated: 2022/10/31 01:07:36 by msaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*s;
 	char	*res;
 
+	if (!s1 || !s2)
+		return (NULL);
 	s = malloc (sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!s)
 		return (NULL);

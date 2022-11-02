@@ -16,7 +16,7 @@ MANDATORY = ft_calloc.c ft_isdigit.c ft_memcmp.c ft_putchar_fd.c ft_split.c ft_s
 			ft_atoi.c ft_isalpha.c ft_itoa.c ft_memmove.c ft_putnbr_fd.c ft_strdup.c ft_strlen.c ft_strrchr.c ft_toupper.c\
 			ft_bzero.c ft_isascii.c ft_memchr.c ft_memset.c ft_putstr_fd.c ft_strjoin.c ft_strmapi.c ft_strtrim.c
 
-BNS = ft_lstadd_back.c ft_lstadd_front.c ft_lstnew.c ft_lstclear.c ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstsize
+BNS = ft_lstadd_back.c ft_lstadd_front.c ft_lstnew.c ft_lstclear.c ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstsize.c ft_lstmap.c
 
 OBJECTS = $(MANDATORY:.c=.o)
 

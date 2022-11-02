@@ -6,7 +6,7 @@
 /*   By: msaidi <msaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 13:26:11 by msaidi            #+#    #+#             */
-/*   Updated: 2022/10/29 20:40:20 by msaidi           ###   ########.fr       */
+/*   Updated: 2022/11/01 17:32:21 by msaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,19 @@ static	char	**makestrs(char const *s, char c)
 	return (strs);
 }
 
-static	int	lenstr(char const *s, char c)
+char	**free_all(char **strs, int j)
+{
+	while (j >= 0)
+	{
+		free(strs[j]);
+		j--;
+	}
+	free(strs);
+	strs = NULL;
+	return (strs);
+}
+
+static int	lenstr(char const *s, char c)
 {
 	int	i;
 
@@ -64,13 +76,14 @@ static	char	**fillstrs(char const *s, char c)
 		if (s[i] == '\0')
 			break ;
 		strs[j] = (char *)malloc(sizeof(char) * (lenstr(s + i, c) + 1));
+		if (!strs[j])
+			return (free_all(strs, j));
 		while (s[i] != c && s[i] != '\0')
 			i++;
 		j++;
 	}
 	return (strs);
 }
-
 
 char	**ft_split(char const *s, char c)
 {
@@ -79,9 +92,13 @@ char	**ft_split(char const *s, char c)
 	int		j;
 	int		k;
 
-	strs = fillstrs(s, c);
 	i = 0;
 	j = 0;
+	if (!s)
+		return (NULL);
+	strs = fillstrs(s, c);
+	if (!strs)
+		return (NULL);
 	while (s[i])
 	{
 		k = 0;
@@ -90,23 +107,8 @@ char	**ft_split(char const *s, char c)
 		if (s[i] == '\0')
 			break ;
 		while (s[i] != c && s[i] != '\0')
-		{
-			strs[j][k] = s[i];
-			i++;
-			k++;
-		}
-		strs[j][k] = '\0';
-		j++;
+			strs[j][k++] = s[i++];
+		strs[j++][k] = '\0';
 	}
 	return (strs);
 }
-/*int main()
-{
-	char **st = ft_split("learning|| is|||fun||as||fuck", '|');
-	int i = 0;
-	while (st[i])
-	{
-		printf("%s\n",st[i]);
-		i++;
-	}
-}*/

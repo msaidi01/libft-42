@@ -6,7 +6,7 @@
 /*   By: msaidi <msaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 14:59:40 by msaidi            #+#    #+#             */
-/*   Updated: 2022/10/30 16:22:08 by msaidi           ###   ########.fr       */
+/*   Updated: 2022/10/30 23:52:25 by msaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char *ps;
-	size_t	i;
+	unsigned char	*ps;
+	int				i;
 
-	i = ft_strlen(s) - 1;
-	ps = (char *) s;
-	while (s[i])
+	i = ft_strlen(s);
+	ps = (unsigned char *) s;
+	while (i >= 0)
 	{
-		if (s[i] == (char)c)
-			return ((char *) s + i);
+		if (ps[i] == (unsigned char)c)
+			return ((char *)ps + i);
 		i--;
 	}
 	return (NULL);
-}
-int main()
-{
-	printf("%s\n", strrchr("abccc\0d", 'c'));
-	printf("%s\n", ft_strrchr("abccc\0d", 'c'));
 }

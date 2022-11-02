@@ -6,21 +6,22 @@
 /*   By: msaidi <msaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:09:23 by msaidi            #+#    #+#             */
-/*   Updated: 2022/10/30 13:47:23 by msaidi           ###   ########.fr       */
+/*   Updated: 2022/11/01 23:42:44 by msaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	countnb(int n)
+static int	countnb(long n)
 {
 	int		i;
 
 	i = 0;
-	if (n == 0)
-		return (1);
 	if (n < 0)
+	{
+		n *= -1;
 		i = 1;
+	}
 	while (n)
 	{
 		n = n / 10;
@@ -28,7 +29,8 @@ int	countnb(int n)
 	}
 	return (i);
 }
-char	*convert(char *str, int n, int l)
+
+static char	*convert(char *str, long n, int l)
 {
 	str[l] = '\0';
 	while (n)
@@ -39,30 +41,32 @@ char	*convert(char *str, int n, int l)
 	}
 	return (str);
 }
+
 char	*ft_itoa(int n)
 {
 	char	*str;
-	int		i;
-	int		l;
-	
-	l = countnb(n);
-	i = 0;
-	if (n == 0)
+	long	nb;
+
+	nb = n;
+	if (nb == 0)
 	{
-		str = (char *)malloc(sizeof(char) * (l + 1));
+		str = (char *)malloc(sizeof(char) * 2);
+		if (!str)
+			return (NULL);
 		str[0] = '0';
 		str[1] = '\0';
 		return (str);
 	}
-	str = (char *)malloc(sizeof(char) * (l + 1));
-	if (n < 0)
+	str = (char *)malloc(sizeof(char) * (countnb(nb) + 1));
+	if (!str)
+		return (NULL);
+	if (nb < 0)
 	{
 		str[0] = '-';
-		n *= -1;
+		nb *= -1;
+		str = convert(str, nb, countnb(nb) + 1);
 	}
-	if (n > 0)
-	{
-		str = convert(str, n, l);
-	}
+	else if (nb > 0)
+		str = convert(str, nb, countnb(nb));
 	return (str);
 }
