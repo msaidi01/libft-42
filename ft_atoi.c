@@ -6,7 +6,7 @@
 /*   By: msaidi <msaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 18:56:52 by msaidi            #+#    #+#             */
-/*   Updated: 2022/11/01 17:04:12 by msaidi           ###   ########.fr       */
+/*   Updated: 2022/11/06 00:07:24 by msaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *n)
 {
-	int	i;
-	int	r;
-	int	s;
+	int		i;
+	long	r;
+	int		s;
 
 	i = 0;
 	r = 0;

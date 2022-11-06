@@ -6,7 +6,7 @@
 /*   By: msaidi <msaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 17:03:48 by msaidi            #+#    #+#             */
-/*   Updated: 2022/11/02 15:27:29 by msaidi           ###   ########.fr       */
+/*   Updated: 2022/11/04 16:42:41 by msaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*node;
 
+	if (!new || !lst)
+		return ;
 	if (*lst)
 	{
 		node = ft_lstlast(*lst);

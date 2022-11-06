@@ -6,7 +6,7 @@
 /*   By: msaidi <msaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 14:47:13 by msaidi            #+#    #+#             */
-/*   Updated: 2022/11/02 05:46:33 by msaidi           ###   ########.fr       */
+/*   Updated: 2022/11/06 01:49:37 by msaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		srt++;
 	while (end != 0 && ft_strchr(set, s1[end]))
 		end--;
-	if (srt >= end)
+	if (srt > end)
 		return (ft_strdup(""));
 	return (ft_substr(s1, srt, ((end - srt) + 1)));
 }
